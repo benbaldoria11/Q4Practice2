@@ -4,11 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Q4 Practice 2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <h1>JavaScript Switch Statement</h1>
 
+    <form>
+        <label for="songs">Enter Any Song Title:</label>
+        <input type="text" name="songs" id="songs" placeholder="Type Here..." class="form-control">
+        <button type="submit" id="btn_song" class="btn btn-success" onclick="checkSOng()">Search</button> 
+    </form>
+
     <script>
+        function checkSong(){
+            var song1 = document.getElementById("songs").value;
+
+            switch (true){
+
+                case (song1 === "Too Little, Too Late"):
+                    alert("It's all yours.");
+                    break;
+                    
+                case (song1 === "Let Down"):
+                    alert("Why was I born short?");
+                    break;
+                    
+                default:
+                    alert("Song Not Available.");
+
+            }
+        }
+
+        /*
         let team = "blue";
 
         switch (team){
@@ -26,8 +53,12 @@
                 
             case "yellow":
                 alert("Yellow Tigers!");
-                break;    
+                break; 
+                
+            default:
+                alert("Team could not be determined.");    
         }
+                */
     </script>
 </body>
 </html>
